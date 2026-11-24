@@ -1,0 +1,18 @@
+PORTFÓLIO — JOÃO ESTEVÃO
+========================
+
+Como abrir: dê dois cliques em "index.html".
+
+Estrutura
+  index.html        -> conteúdo da página (textos, projetos, contatos)
+  css/style.css     -> visual (cores no topo do arquivo, bloco ":root")
+  js/main.js        -> interações (tema, menu, animações, filtro, digitação)
+  imagem/           -> imagens do site
+
+Personalizar
+  - Sua foto: coloque a foto em imagem/ e troque "imagem/avatar.svg" no index.html.
+  - Projetos: em cada <article class="projeto"> troque imagem, título, texto, tags e o href="#" do "Ver projeto".
+  - Filtro de projetos: use data-categoria="react" ou "html-css" (pode ter as duas separadas por espaço).
+  - Habilidades: ajuste data-nivel e data-nivel-num (0 a 100) em cada card.
+  - Frases do efeito de digitação: no início da seção 3 do js/main.js.
+  - Trajetória: troque "Nome da Instituição" e "Plataforma / Escola" pelos nomes reais.

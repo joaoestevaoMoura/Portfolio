@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Estevão | Desenvolvedor em formação</title>
+  <meta name="description" content="Portfólio de João Estevão, estudante de Desenvolvimento de Sistemas em Jales - SP. Projetos com HTML, CSS, TypeScript e React." />
+  <meta name="theme-color" content="#0a0f1e" />
+
+  <!-- Compartilhamento (WhatsApp, LinkedIn etc.) -->
+  <meta property="og:title" content="João Estevão | Desenvolvedor em formação" />
+  <meta property="og:description" content="Estudante de Desenvolvimento de Sistemas em Jales - SP." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="imagem/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fontes: Space Grotesk (títulos) e Inter (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Aplica o tema antes de desenhar a página (evita "piscar") -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("tema"); } catch (e) {}
+      if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "claro" : "escuro";
+      document.documentElement.setAttribute("data-tema", t);
+    })();
+  </script>
+</head>
+<body>
+
+  <a href="#conteudo" class="pular-link">Pular para o conteúdo</a>
+
+  <!-- ===================== MENU ===================== -->
+  <header class="menu" id="menu">
+    <nav class="container menu-nav" aria-label="Navegação principal">
+      <a href="#inicio" class="logo" aria-label="Início">
+        <span class="logo-marca">JE</span>
+        <span class="logo-texto">João Estevão</span>
+      </a>
+
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#formacao">Trajetória</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="menu-acoes">
+        <button class="btn-icone" id="btnTema" aria-label="Alternar tema claro/escuro">
+          <svg class="icone-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icone-lua" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a href="#contato" class="btn btn-primario btn-pequeno menu-cta">Contratar</a>
+        <button class="btn-icone btn-menu-mobile" id="btnMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuLinks">
+          <span class="hamburguer" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== 1. INÍCIO ===================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-fundo" aria-hidden="true">
+        <div class="grade"></div>
+        <div class="bolha bolha-1"></div>
+        <div class="bolha bolha-2"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-conteudo revelar">
+          <span class="selo"><span class="ponto-status"></span> Aberto a estágios e oportunidades</span>
+
+          <h1 class="hero-titulo">
+            Olá, eu sou<br />
+            <span class="gradiente">João Estevão</span>
+          </h1>
+
+          <p class="hero-profissao">
+            <span id="digitando" aria-live="polite">Estudante de Desenvolvimento de Sistemas</span><span class="cursor" aria-hidden="true">|</span>
+          </p>
+
+          <p class="hero-descricao">
+            Transformo ideias em interfaces web bonitas, rápidas e fáceis de usar.
+            Baseado em <strong>Jales - SP</strong>.
+          </p>
+
+          <div class="hero-botoes">
+            <a href="#projetos" class="btn btn-primario">
+              Ver projetos
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#contato" class="btn btn-secundario">Fale comigo</a>
+          </div>
+
+          <ul class="hero-sociais" aria-label="Redes sociais">
+            <li><a href="https://github.com/joaoestevaoMoura" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/joaoestvaomoura" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a></li>
+            <li><a href="mailto:joao.moura28@aluno.cps.gov.br" aria-label="E-mail">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </a></li>
+          </ul>
+        </div>
+
+        <!-- Janela de código decorativa -->
+        <div class="hero-visual revelar" aria-hidden="true">
+          <div class="janela-codigo">
+            <div class="janela-topo">
+              <span></span><span></span><span></span>
+              <p>joao.ts</p>
+            </div>
+<pre class="codigo"><code><span class="c-kw">const</span> <span class="c-var">dev</span> = {
+  <span class="c-prop">nome</span>: <span class="c-str">"João Estevão"</span>,
+  <span class="c-prop">local</span>: <span class="c-str">"Jales - SP"</span>,
+  <span class="c-prop">curso</span>: <span class="c-str">"Desenv. de Sistemas"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>,
+          <span class="c-str">"TypeScript"</span>, <span class="c-str">"React"</span>],
+  <span class="c-prop">aprendendo</span>: <span class="c-bool">true</span>,
+};
+
+<span class="c-fn">contratar</span>(<span class="c-var">dev</span>); <span class="c-com">// 🚀</span></code></pre>
+          </div>
+          <div class="cartao-flutuante cartao-1">
+            <span class="cf-icone">⚡</span>
+            <div><strong>Responsivo</strong><small>Mobile first</small></div>
+          </div>
+          <div class="cartao-flutuante cartao-2">
+            <span class="cf-icone">🎨</span>
+            <div><strong>UI moderna</strong><small>Foco no usuário</small></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="rolar-indicador" aria-label="Rolar para Sobre"><span></span></a>
+    </section>
+
+    <!-- ===================== 2. SOBRE ===================== -->
+    <section id="sobre" class="secao">
+      <div class="container">
+        <header class="titulo-secao revelar">
+          <span class="etiqueta">01 · Sobre</span>
+          <h2>Quem sou eu</h2>
+        </header>
+
+        <div class="sobre-grid">
+          <!-- FOTO: troque "imagem/avatar.svg" pela sua foto (ex.: imagem/minha-foto.jpg) -->
+          <div class="sobre-foto revelar">
+            <div class="foto-moldura">
+              <img src="imagem/avatar1.jpeg" alt="Foto de João Estevão" width="480" height="560" />
+            </div>
+            <div class="foto-selo">
+              <strong>+3</strong>
+              <span>projetos<br />desenvolvidos</span>
+            </div>
+          </div>
+
+          <div class="sobre-texto revelar">
+            <h3>Desenvolvedor em formação, apaixonado por tecnologia.</h3>
+            <p>
+              Sou estudante de Desenvolvimento de Sistemas em Jales - SP. Gosto de transformar ideias
+              em páginas web bonitas, rápidas e fáceis de usar.
+            </p>
+            <p>
+              Estou sempre aprendendo coisas novas e buscando oportunidades para aplicar meus
+              conhecimentos em projetos reais. <!-- Edite este texto com a sua história -->
+            </p>
+
+            <ul class="sobre-destaques">
+              <li>
+                <span class="d-icone">🎓</span>
+                <div><strong>Formação</strong><small>Desenvolvimento de Sistemas</small></div>
+              </li>
+              <li>
+                <span class="d-icone">📍</span>
+                <div><strong>Localização</strong><small>Jales - SP</small></div>
+              </li>
+              <li>
+                <span class="d-icone">💼</span>
+                <div><strong>Status</strong><small>Aberto a oportunidades</small></div>
+              </li>
+              <li>
+                <span class="d-icone">🧠</span>
+                <div><strong>Foco</strong><small>Front-end e interfaces</small></div>
+              </li>
+            </ul>
+
+            <div class="sobre-botoes">
+              <a href="#contato" class="btn btn-primario">Vamos conversar</a>
+              <!-- Para adicionar seu currículo: coloque o PDF na pasta e troque o href -->
+              <a href="https://www.linkedin.com/in/joaoestvaomoura" target="_blank" rel="noopener" class="btn btn-secundario">Ver LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. HABILIDADES ===================== -->
+    <section id="habilidades" class="secao secao-alt">
+      <div class="container">
+        <header class="titulo-secao revelar">
+          <span class="etiqueta">02 · Habilidades</span>
+          <h2>O que eu sei fazer</h2>
+          <p>Tecnologias que uso para construir interfaces modernas e responsivas.</p>
+        </header>
+
+        <!-- Para adicionar uma habilidade, copie um bloco .habilidade e ajuste o data-nivel (0 a 100) -->
+        <div class="habilidades-grid">
+          <article class="habilidade revelar" style="--cor: #e34f26">
+            <div class="habilidade-topo">
+              <div class="habilidade-icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+              </div>
+              <div>
+                <h3>HTML</h3>
+                <small>Estrutura</small>
+              </div>
+              <span class="nivel-num" data-nivel-num="80">0%</span>
+            </div>
+            <p>Estruturação de páginas semânticas e acessíveis.</p>
+            <div class="barra"><div class="barra-preenchida" data-nivel="80"></div></div>
+          </article>
+
+          <article class="habilidade revelar" style="--cor: #2965f1">
+            <div class="habilidade-topo">
+              <div class="habilidade-icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5M3 16.5L12 21l9-4.5"/></svg>
+              </div>
+              <div>
+                <h3>CSS</h3>
+                <small>Estilo e layout</small>
+              </div>
+              <span class="nivel-num" data-nivel-num="70">0%</span>
+            </div>
+            <p>Estilização, layouts responsivos com Flexbox e Grid e animações.</p>
+            <div class="barra"><div class="barra-preenchida" data-nivel="70"></div></div>
+          </article>
+
+          <article class="habilidade revelar" style="--cor: #3178c6">
+            <div class="habilidade-topo">
+              <div class="habilidade-icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11h6M11 11v7M15.5 17.5c.5.4 1.2.6 1.8.5.8-.1 1.2-.6 1.2-1.2 0-1.5-3-1-3-2.6 0-.6.5-1.1 1.3-1.2.6 0 1.1.1 1.6.5"/></svg>
+              </div>
+              <div>
+                <h3>TypeScript</h3>
+                <small>Lógica tipada</small>
+              </div>
+              <span class="nivel-num" data-nivel-num="50">0%</span>
+            </div>
+            <p>Código mais seguro e organizado, usado no projeto Truck Company.</p>
+            <div class="barra"><div class="barra-preenchida" data-nivel="50"></div></div>
+          </article>
+
+          <article class="habilidade revelar" style="--cor: #149eca">
+            <div class="habilidade-topo">
+              <div class="habilidade-icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
+              </div>
+              <div>
+                <h3>React</h3>
+                <small>Componentes</small>
+              </div>
+              <span class="nivel-num" data-nivel-num="45">0%</span>
+            </div>
+            <p>Criação de interfaces com componentes reutilizáveis.</p>
+            <div class="barra"><div class="barra-preenchida" data-nivel="45"></div></div>
+          </article>
+        </div>
+
+        <!-- Faixa de ferramentas -->
+        <div class="ferramentas revelar">
+          <p>Ferramentas do dia a dia</p>
+          <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>Figma</li>
+            <li>Responsividade</li>
+            <li>Acessibilidade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. PROJETOS ===================== -->
+    <section id="projetos" class="secao">
+      <div class="container">
+        <header class="titulo-secao revelar">
+          <span class="etiqueta">03 · Projetos</span>
+          <h2>Meu trabalho</h2>
+          <p>Alguns projetos que desenvolvi enquanto estudo e pratico.</p>
+        </header>
+
+        <!-- Filtros: cada projeto tem data-categoria com uma ou mais categorias -->
+        <div class="filtros revelar" role="group" aria-label="Filtrar projetos">
+          <button class="filtro ativo" data-filtro="todos">Todos</button>
+          <button class="filtro" data-filtro="react">React / TS</button>
+          <button class="filtro" data-filtro="html-css">HTML &amp; CSS</button>
+        </div>
+
+        <!-- Para editar: troque o src da imagem, o título, a descrição, as tags e o href do link -->
+        <div class="projetos-grid">
+          <article class="projeto projeto-destaque revelar" data-categoria="react">
+            <div class="projeto-imagem projeto-imagem-clara">
+              <img src="imagem/truck-company.jpeg" alt="Logo do projeto Truck Company" loading="lazy" />
+              <span class="projeto-badge">⭐ Destaque</span>
+            </div>
+            <div class="projeto-corpo">
+              <span class="projeto-tipo">Sistema web</span>
+              <h3>Truck Company</h3>
+              <p>Sistema que conecta empresas a caminhoneiros, facilitando a publicação de cargas e a contratação de fretes.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>TypeScript</li><li>React</li></ul>
+              <div class="projeto-links">
+                <a href="#" target="_blank" rel="noopener" class="projeto-link">
+                  Ver projeto
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                </a>
+                <a href="https://github.com/joaoestevaoMoura" target="_blank" rel="noopener" class="projeto-link projeto-link-sec">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projeto revelar" data-categoria="html-css">
+            <div class="projeto-imagem">
+              <img src="imagem/projeto-receitas.svg" alt="Ilustração da Página de Receitas" loading="lazy" />
+            </div>
+            <div class="projeto-corpo">
+              <span class="projeto-tipo">Site responsivo</span>
+              <h3>Página de Receitas</h3>
+              <p>Site com receitas organizadas em cards, totalmente responsivo para celular.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+              <div class="projeto-links">
+                <a href="#" target="_blank" rel="noopener" class="projeto-link">
+                  Ver projeto
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projeto revelar" data-categoria="html-css">
+            <div class="projeto-imagem">
+              <img src="imagem/projeto-formulario.svg" alt="Ilustração do Formulário de Cadastro" loading="lazy" />
+            </div>
+            <div class="projeto-corpo">
+              <span class="projeto-tipo">Interface</span>
+              <h3>Formulário de Cadastro</h3>
+              <p>Formulário estilizado com validação visual dos campos e layout moderno.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+              <div class="projeto-links">
+                <a href="#" target="_blank" rel="noopener" class="projeto-link">
+                  Ver projeto
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projetos-mais revelar">
+          <a href="https://github.com/joaoestevaoMoura" target="_blank" rel="noopener" class="btn btn-secundario">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+            Ver mais no GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. TRAJETÓRIA ===================== -->
+    <section id="formacao" class="secao secao-alt">
+      <div class="container">
+        <header class="titulo-secao revelar">
+          <span class="etiqueta">04 · Trajetória</span>
+          <h2>Formação e experiência</h2>
+        </header>
+
+        <!-- Para adicionar um item, copie um bloco <li class="item-tempo"> -->
+        <ol class="linha-tempo">
+          <li class="item-tempo revelar">
+            <div class="item-cartao">
+              <span class="data">2025 — Atual</span>
+              <h3>Desenvolvimento de Sistemas</h3>
+              <p class="instituicao">Nome da Instituição</p>
+              <p>Curso técnico com foco em programação, banco de dados e desenvolvimento web.</p>
+            </div>
+          </li>
+
+          <li class="item-tempo revelar">
+            <div class="item-cartao">
+              <span class="data">2025</span>
+              <h3>Curso de HTML e CSS</h3>
+              <p class="instituicao">Plataforma / Escola</p>
+              <p>Fundamentos de criação de páginas web, responsividade e boas práticas.</p>
+            </div>
+          </li>
+
+          <li class="item-tempo revelar">
+            <div class="item-cartao">
+              <span class="data">2024</span>
+              <h3>Primeiro projeto pessoal</h3>
+              <p class="instituicao">Projeto independente</p>
+              <p>Criação do meu primeiro site, colocando em prática o que aprendi nos estudos.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 6. CONTATO ===================== -->
+    <section id="contato" class="secao">
+      <div class="container">
+        <div class="contato-caixa revelar">
+          <div class="contato-texto">
+            <span class="etiqueta">05 · Contato</span>
+            <h2>Vamos construir algo juntos?</h2>
+            <p>Estou disponível para estágios, projetos e novas oportunidades. Fique à vontade para me chamar!</p>
+            <button class="btn btn-claro" id="btnCopiarEmail" data-email="joao.moura28@aluno.cps.gov.br">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+              <span>Copiar e-mail</span>
+            </button>
+          </div>
+
+          <div class="contato-grid">
+            <a href="mailto:joao.moura28@aluno.cps.gov.br" class="contato-card">
+              <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+              <div><h3>E-mail</h3><p>joao.moura28@aluno.cps.gov.br</p></div>
+            </a>
+
+            <!-- WhatsApp: no link, use 55 + DDD + número, só dígitos -->
+            <a href="https://wa.me/5517996547682" target="_blank" rel="noopener" class="contato-card">
+              <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
+              <div><h3>WhatsApp</h3><p>(17) 99654-7682</p></div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/joaoestvaomoura" target="_blank" rel="noopener" class="contato-card">
+              <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+              <div><h3>LinkedIn</h3><p>João Estevão Mello Moura</p></div>
+            </a>
+
+            <a href="https://github.com/joaoestevaoMoura" target="_blank" rel="noopener" class="contato-card">
+              <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></span>
+              <div><h3>GitHub</h3><p>github.com/joaoestevaoMoura</p></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <a href="#inicio" class="logo">
+        <span class="logo-marca">JE</span>
+        <span class="logo-texto">João Estevão</span>
+      </a>
+      <p>© <span id="ano"></span> João Estevão · Feito com HTML, CSS e JavaScript.</p>
+      <a href="#inicio" class="rodape-topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
